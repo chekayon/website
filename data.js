@@ -1,6 +1,8 @@
 /* sheet_to_data.py 자동 생성. 시트를 다시 변환하면 덮어쓰입니다. */
 
-window.SITE = { defaultLang: 'kr', title: { kr: '작가 포트폴리오', en: 'Portfolio' } };
+/* sheet_to_data.py 자동 생성 — 데이터만 담깁니다.
+   이름·연락처·시리즈색 등 설정은 config.js에서 관리하세요. */
+
 
 window.RESEARCHES = [
   {
@@ -80,8 +82,8 @@ window.SPOTS = [
       "en": "Iceland"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "아이슬란드",
+      "en": "Iceland"
     },
     "lat": 64.99462583,
     "lng": -19.04729143,
@@ -95,6 +97,7 @@ window.SPOTS = [
       "kr": "한국어판 가이드북조차 없던 나라. 나에게 가장 익숙한 곳에서 가장 먼 풍경, 오로라가 나타난다는 땅으로 떠났다.",
       "en": "A country with no Korean guidebook at the time. The landscape furthest from anything familiar — a land where the aurora was said to appear."
     },
+    "status": "",
     "workIds": [
       "CL_iceland_2014"
     ],
@@ -113,8 +116,8 @@ window.SPOTS = [
       "en": "Ólafsfjörður"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "아이슬란드",
+      "en": "Iceland"
     },
     "lat": 66.0726242,
     "lng": -18.6531721,
@@ -128,6 +131,7 @@ window.SPOTS = [
       "kr": "아이슬란드에서도 가장 북쪽, 북극을 바라보는 Ólafsfjörður에서의 3개월. 상상 속의 풍경이 일상이 되고, 익숙했던 일상이 낯설어지는 경험이었다. 한국에서 가져온 벼루와 동양화 붓은 이곳에서 아마 유일한 것들이었다. 반대로 눈 덮인 풍경, 빙하, 오로라는 일상으로 돌아가고 나면 꿈처럼 느껴질 것이다.",
       "en": "Three months in Ólafsfjörður — the northernmost point of Iceland, facing the Arctic. The imagined became everyday, and the everyday became strange. The ink stone and brush I had shipped from Korea were likely the only ones in the country. The snow-covered landscape, the glaciers, the aurora — once back in ordinary life, they would feel like something dreamed."
     },
+    "status": "",
     "workIds": [
       "CL_iceland_2014"
     ],
@@ -152,8 +156,8 @@ window.SPOTS = [
       "en": "Seoul"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 37.530005,
     "lng": 126.969563,
@@ -167,6 +171,7 @@ window.SPOTS = [
       "kr": "오로라의 춤을 손 안에 잡을 수 있다면, 블루라군의 온천수를 짐 가방 가득 담아갈 수 있다면, 아이슬란드에서 마주한 장면들을 서울의 일상 속에서 꺼내볼 수 있다면. 집으로 돌아오는 길, 나는 나의 자연관이 인스턴트 식품처럼 언제든 간편하게 열어 소비할 수 있는 것으로 가공되어 있었다는 것을 알았다.",
       "en": "If I could hold the aurora in my hands. If I could carry the waters of the Blue Lagoon home in my bag. If I could pull out the landscapes of Iceland whenever I wanted, in the middle of everyday life in Seoul. On the way home, I realized my relationship with nature had been processed into something like instant food — portioned, packaged, ready to open and consume at will."
     },
+    "status": "",
     "workIds": [
       "CL_iceland_2014"
     ],
@@ -184,8 +189,8 @@ window.SPOTS = [
       "en": "Anhui"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 30.47929577,
     "lng": 118.1459259,
@@ -199,6 +204,7 @@ window.SPOTS = [
       "kr": "중국 안후이의 레지던시에서 M을 만났다. 레지던시 이후, 나는 M에게 세르비아의 멋진 풍경 사진을 보내달라고 부탁했다. 그 작은 부탁에서 《세르비아의 산, 채석장, 벤챠스》이 시작되었다.",
       "en": "At a short-term artist residency in Anhui, I met M. After we parted, I asked her to send me a photo — something of Serbia, something she found beautiful. That small request became the beginning of A Serbian Mountain, a Quarry, Venčac."
     },
+    "status": "",
     "workIds": [
       "SM_hyeong_2020",
       "SM_KEP_2022",
@@ -223,8 +229,8 @@ window.SPOTS = [
       "en": "Venčac"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "세르비아",
+      "en": "Serbia"
     },
     "lat": 44.2646316,
     "lng": 20.59277772,
@@ -238,6 +244,7 @@ window.SPOTS = [
       "kr": "M이 직접 찍은 사진을 보내왔다 — 세르비아의 산, 벤챠스. 나는 가본 적 없는 곳이다. 사진을 보면서, 언젠가 내가 그 산을 오를 날을 상상하기 시작했다.",
       "en": "M sent me a photo she had taken there — a mountain in Serbia, Venčac. I had never been. Looking at the image, I began to picture the day I would climb it myself."
     },
+    "status": "",
     "workIds": [
       "SM_hyeong_2020",
       "SM_KEP_2022",
@@ -258,8 +265,8 @@ window.SPOTS = [
       "en": "Seoul"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 37.530005,
     "lng": 126.969563,
@@ -273,6 +280,7 @@ window.SPOTS = [
       "kr": "나는 이미 그 산을 그리고 있었다. 그것이 채석장이라는 사실을 알게 된 것은 그림의 한 모서리가 완성되어 가던 도중이었다. 코로나19로 이동과 만남이 불가능했던 시간 동안, 나는 M의 사진과 나의 상상 속 산을 그려나갔다. 그 풍경이 조금씩 사라지고 있다는 것도 모른 채.",
       "en": "I had already begun painting the mountain. It was while one corner of the canvas was nearing completion that I learned it was a quarry. During the period when COVID-19 made travel and contact impossible, I painted from M's photo and from my own imagination — unaware that the landscape was gradually disappearing."
     },
+    "status": "",
     "workIds": [
       "SM_hyeong_2020",
       "SM_KEP_2022",
@@ -296,8 +304,8 @@ window.SPOTS = [
       "en": "Eastbourne"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "영국",
+      "en": "England"
     },
     "lat": 50.7798381,
     "lng": 0.2528824,
@@ -311,6 +319,7 @@ window.SPOTS = [
       "kr": "1984년 한국의 한 작은 마을에 위치한 테마파크 \"부곡하와이\"에서 발송된 엽서가 도착했던 곳.",
       "en": "The address where a postcard sent from Bugok Hawaii — a theme park in a small Korean village — once arrived, in 1984."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -329,8 +338,8 @@ window.SPOTS = [
       "en": "Seoul"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 37.530005,
     "lng": 126.969563,
@@ -344,6 +353,7 @@ window.SPOTS = [
       "kr": "중고물품 거래 웹사이트에서 J의 엽서를 우연히 발견했다. 1980년대 한국의 작은 농촌 마을에 있었다는 테마파크를 방문한 영국인 관광객의 사연이 궁금해 엽서가 배송되어 오기를 기다렸다. 도착한 엽서의 편지글을 읽는 동안, 나의 상상 속 인물은 그림자도 없이 사라지고 — 화려한 조명 아래 춤을 추고, 무대 밖에서는 낯선 풍경에 조금씩 적응해나가던 외국인 댄서 Jacky가 실루엣을 드러냈다.",
       "en": "I came across J's postcard by chance on a second-hand marketplace. Curious about the story of a British tourist who had visited a theme park in a small rural village in 1980s Korea, I waited for it to arrive. Reading the letter written on the card, the figure I had imagined disappeared without a trace — and in its place, the silhouette of Jacky emerged: a foreign dancer performing under bright stage lights, slowly finding her footing in an unfamiliar place."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -362,8 +372,8 @@ window.SPOTS = [
       "en": "Tongyeong"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 34.826713,
     "lng": 128.426109,
@@ -377,6 +387,7 @@ window.SPOTS = [
       "kr": "부곡하와이의 폐업에 관한 생각과 방문기를 블로그에 소개한 테마파크 전문가, 김혁 통영관광개발공사 사장을 만나 인터뷰했다. 부곡하와이가 모방한 일본의 \"스파 리조트 하와이안즈\"를 직접 방문한 경험도 함께 들었다.",
       "en": "An interview with Hyuk KIM, president of Tongyeong Tourism Development Corporation, who had written about the closure of Bugok Hawaii on his blog as a theme park expert. He also shared his memories of visiting Spa Resort Hawaiians in Japan — the model that Bugok Hawaii had replicated."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -394,8 +405,8 @@ window.SPOTS = [
       "en": "Bugok"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.439277,
     "lng": 128.592678,
@@ -409,6 +420,7 @@ window.SPOTS = [
       "kr": "2017년 폐업 이후 마지막 영업일의 모습 그대로 방치되어 있는 테마파크 부곡하와이로 찾아갔다. 외부인의 출입을 통제하는 높다란 벽에는 저마다의 추억을 방명록처럼 남겨놓은 사람들의 글귀가 있었고, 벽 너머로는 메마른 잎사귀를 힘없이 늘어뜨리며 숨죽여 살아가는 야자수들이 보였다.",
       "en": "I visited Bugok Hawaii, a theme park left untouched since its last day of operation before closing in 2017. On the tall walls barring entry to outsiders, people had left traces of their memories — messages written like guest book entries. Beyond the walls, palm trees stood barely alive, their dried leaves hanging limp."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -424,8 +436,8 @@ window.SPOTS = [
       "en": "Bugok"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.436273,
     "lng": 128.591644,
@@ -439,6 +451,7 @@ window.SPOTS = [
       "kr": "창녕군청의 부곡온천르네상스관에서 송종진 창녕군청 생태관광과 온천팀장과 인터뷰를 진행했다. 부지 매각을 비공개로 진행하고 있는 부곡하와이 사측의 입장과, 폐업 이후 지역과 지역민들에게 일어난 변화에 대해 들을 수 있었다.",
       "en": "An interview with Jong-jin SONG, head of the hot spring team at Changnyeong County's Department of Ecological Tourism, held at the Bugok Hot Spring Renaissance Center. He spoke about the management's decision to keep the sale of the site undisclosed, and the changes the closure of Bugok Hawaii had brought to the area and its residents."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -454,8 +467,8 @@ window.SPOTS = [
       "en": "Bugok"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.439119,
     "lng": 128.589041,
@@ -469,6 +482,7 @@ window.SPOTS = [
       "kr": "부곡스파디움 따오기호텔 로비에서 유옥근 전 부곡하와이 공연 팀장 및 노조위원장, 정규환 전 부곡하와이공연단 단장을 만나 인터뷰했다. J와 같은 외국인 공연단과 함께 숙식하고, 리허설을 거쳐 무대를 올리는 일을 함께 해온 분들이었다. 활동 시기가 J와 겹치기도 했지만, 외국인 댄서들의 이름은 기억하지 못하셨다.",
       "en": "An interview with Ok-geun YOO, former performance team leader and union chairman at Bugok Hawaii, and Gyu-hwan JEONG, former director of the Bugok Hawaii performance troupe, held in the lobby of the Bugok Spadium Taogi Hotel. Both had worked closely with foreign performers like J — sharing meals, rehearsals, and the stage. Their time at Bugok Hawaii overlapped with J's, yet neither could recall the names of the foreign dancers."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -484,8 +498,8 @@ window.SPOTS = [
       "en": "Bugok"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.437592,
     "lng": 128.590543,
@@ -499,6 +513,7 @@ window.SPOTS = [
       "kr": "부곡버스터미널의 시외버스는 부곡면과 외부를 연결하는 유일한 대중교통이다. J 또한 이곳을 거쳐 부곡하와이로 향했을 것이고, 내가 짐작할 수 없는 어느 날 다시 이곳을 거쳐 어딘가로 떠나갔을 것이다.",
       "en": "The intercity buses from Bugok Terminal are the only public transport connecting Bugok-myeon to the outside world. J would have passed through here on the way to Bugok Hawaii — and on some day I cannot know, would have passed through again, leaving for somewhere else."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -514,8 +529,8 @@ window.SPOTS = [
       "en": "Bugok"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.436826,
     "lng": 128.592454,
@@ -529,6 +544,7 @@ window.SPOTS = [
       "kr": "부곡하와이 인근, 부곡면에서 유일한 우체국이다. J는 엽서에 일주일에 한 번 편지를 부칠 수 있다고 적었다. 자신의 일상을 빼곡히 담은 그 엽서를 이곳 부곡우체국에서 집으로 보냈을 것이다. 엽서는 알 수 없는 경로들을 거쳐 나에게 발견되었고, 그렇게 잠깐 다시 부곡으로 돌아왔다.",
       "en": "The only post office in Bugok-myeon, near Bugok Hawaii. J wrote that she can sent a letter only once a week. She would have brought that postcard — filled with the details of her daily life — here, to this post office, and mailed it home. Through paths I cannot trace, it eventually found its way to me, and briefly returned to Bugok."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -544,8 +560,8 @@ window.SPOTS = [
       "en": "Bugok"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.437641,
     "lng": 128.601652,
@@ -559,6 +575,7 @@ window.SPOTS = [
       "kr": "J와 같은 외국인 댄서들이 숙식했던 숙소다. 외국인 공연팀과 함께 일했던 직원분들이 위치를 알려주셔서 찾아갔다. 11층 전체를 외국인 댄서 숙소로 사용했다고 하는데, 방문 당시 마침 11층에서 리모델링이 진행 중이어서 내부에 들어가볼 수 있었다. 직원분들이 말씀해주셨던 내부 구조 그대로였다.",
       "en": "The residential building where foreign dancers like J lived during their time at Bugok Hawaii. Former staff members who had worked with the foreign performance teams told me where to find it. The entire eleventh floor had been used as housing for foreign dancers. When I visited, a renovation happened to be underway on that floor, and I was able to go inside — the layout was exactly as the staff had described."
     },
+    "status": "",
     "workIds": [
       "SF_kumho_2022",
       "SF_woosuk_2023"
@@ -574,8 +591,8 @@ window.SPOTS = [
       "en": "Iwaki"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 36.9935903,
     "lng": 140.8156474,
@@ -589,6 +606,7 @@ window.SPOTS = [
       "kr": "부곡하와이의 원형 모델이라는 일본 후쿠시마현 이와키시의 하와이안즈 스파 리조트에서 하루 숙박하며 지금의 하와이안즈를 경험하고, 그 시절의 부곡하와이를 상상해보았다. 실제 하와이와는 거리가 있지만 소홀함 없이 \"하와이스러움\"을 구현해내는 그 공간에서, 이미지와 기억, 상상과 경험에 관하여 생각했다.",
       "en": "I stayed one night at Spa Resort Hawaiians in Iwaki, Fukushima — the original model said to have inspired Bugok Hawaii. I experienced the Hawaiians of today, and tried to imagine Bugok Hawaii as it once was. In a space that has no direct connection to Hawaii yet renders \"Hawaiian-ness\" with full commitment, I found myself thinking about image and memory, imagination and experience."
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -601,8 +619,8 @@ window.SPOTS = [
       "en": "Hawaii"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "미국",
+      "en": "USA"
     },
     "lat": 21.52608559,
     "lng": -158.0376455,
@@ -616,6 +634,7 @@ window.SPOTS = [
       "kr": "하와이 오아후 섬 북쪽(노스쇼어)에 위치한 역사적인 파인애플 농장이자, 대표적인 관광 테마파크.",
       "en": "Dole Plantation is a major tourist attraction on Oahu, Hawaii, located near Wahiawa, featuring \"Hawaii's Pineapple Experience\"."
     },
+    "status": "",
     "workIds": [
       "FR_incheon_2023",
       "FR_chosun_2023",
@@ -635,8 +654,8 @@ window.SPOTS = [
       "en": "Dunmore"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "스코틀랜드",
+      "en": "Scotland"
     },
     "lat": 56.07672478,
     "lng": -3.786486915,
@@ -650,6 +669,7 @@ window.SPOTS = [
       "kr": "파인애플 모양의 건물",
       "en": "Pineapple-shaped building"
     },
+    "status": "",
     "workIds": [
       "FR_incheon_2023",
       "FR_chosun_2023",
@@ -675,8 +695,8 @@ window.SPOTS = [
       "en": "Latmos"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "튀르키예",
+      "en": "Türkiye"
     },
     "lat": 37.38537362,
     "lng": 27.25727821,
@@ -690,6 +710,7 @@ window.SPOTS = [
       "kr": "신화 속 목동 엔디미온에게 헌정된 곳으로, 전설에 따르면 제우스는 달의 여신 셀레네가 매일 밤 그를 찾아올 수 있도록 엔디미온에게 영원한 젊음을 선물했다고 한다. 단, 영원히 잠들어 있는 상태로.",
       "en": "It is dedicated to the mythical shepherd Endymion, who, according to legend, was granted eternal sleep and youth by Zeus so the moon goddess Selene could visit him every night."
     },
+    "status": "",
     "workIds": [
       "FR_incheon_2023",
       "FR_chosun_2023",
@@ -707,8 +728,8 @@ window.SPOTS = [
       "en": "Kaohsiung"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.61875551,
     "lng": 120.2858524,
@@ -722,6 +743,7 @@ window.SPOTS = [
       "kr": "",
       "en": "Artist Residency in Kaohsiung, Pier-2 Artist Residency (PAIR), Research on canned food in Taiwan"
     },
+    "status": "now",
     "workIds": [],
     "images": []
   },
@@ -734,8 +756,8 @@ window.SPOTS = [
       "en": "Kaohsiung"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.65786594,
     "lng": 120.4208337,
@@ -749,6 +771,7 @@ window.SPOTS = [
       "kr": "",
       "en": "Taiwan Pineapple Factory"
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -761,8 +784,8 @@ window.SPOTS = [
       "en": "Busan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.10197191,
     "lng": 129.0258482,
@@ -776,6 +799,7 @@ window.SPOTS = [
       "kr": "",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_pas_2024"
     ],
@@ -790,8 +814,8 @@ window.SPOTS = [
       "en": "Busan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.10149792,
     "lng": 129.0281549,
@@ -805,6 +829,7 @@ window.SPOTS = [
       "kr": "",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_pas_2024"
     ],
@@ -819,8 +844,8 @@ window.SPOTS = [
       "en": "Hiroshima"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 34.36613167,
     "lng": 132.4618389,
@@ -834,6 +859,7 @@ window.SPOTS = [
       "kr": "",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_pas_2024"
     ],
@@ -848,8 +874,8 @@ window.SPOTS = [
       "en": "Hiroshima"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 34.3668313,
     "lng": 132.4615814,
@@ -863,6 +889,7 @@ window.SPOTS = [
       "kr": "",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_pas_2024"
     ],
@@ -877,8 +904,8 @@ window.SPOTS = [
       "en": "Pyeongtaek"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 36.96506638,
     "lng": 127.0022292,
@@ -892,6 +919,7 @@ window.SPOTS = [
       "kr": "참전용사에게 육류, 농산물, 팬트리 식품, 기타 슈퍼마켓 음식을 제공하는 깔끔한 매장입니다.",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_pas_2024"
     ],
@@ -906,8 +934,8 @@ window.SPOTS = [
       "en": "Seoul"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 37.561196,
     "lng": 126.977769,
@@ -921,6 +949,7 @@ window.SPOTS = [
       "kr": "구 다케나카 경성지점",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -933,8 +962,8 @@ window.SPOTS = [
       "en": "Sapporo"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 43.0212945,
     "lng": 141.3652039,
@@ -948,6 +977,7 @@ window.SPOTS = [
       "kr": "홋카이도 통조림 리서치, Tenjinyama Art Studio",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -963,8 +993,8 @@ window.SPOTS = [
       "en": "Nemuro"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 43.3296489,
     "lng": 145.5814786,
@@ -978,6 +1008,7 @@ window.SPOTS = [
       "kr": "네무로  토키와다이 공원 여공의 노래비",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -993,8 +1024,8 @@ window.SPOTS = [
       "en": "Nemuro"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 43.33093216,
     "lng": 145.5807303,
@@ -1008,6 +1039,7 @@ window.SPOTS = [
       "kr": "우수이 카츠사부로 양조장",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1023,8 +1055,8 @@ window.SPOTS = [
       "en": "Honbetsukai"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 43.3848576,
     "lng": 145.2880026,
@@ -1038,6 +1070,7 @@ window.SPOTS = [
       "kr": "홋카이도 개척사 통조림 공장 건물",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1053,8 +1086,8 @@ window.SPOTS = [
       "en": "Otaru"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 43.20533224,
     "lng": 141.0003679,
@@ -1068,6 +1101,7 @@ window.SPOTS = [
       "kr": "Hokkai Seikan 통조림 공장, 회사",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1083,8 +1117,8 @@ window.SPOTS = [
       "en": "Ishikari"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 43.24412333,
     "lng": 141.3511296,
@@ -1098,6 +1132,7 @@ window.SPOTS = [
       "kr": "홋카이도 개척사 통조림 공장 기념비",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1113,8 +1148,8 @@ window.SPOTS = [
       "en": "Seoul"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 37.530005,
     "lng": 126.969563,
@@ -1128,6 +1163,7 @@ window.SPOTS = [
       "kr": "만철 가이드북 수집",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1143,8 +1179,8 @@ window.SPOTS = [
       "en": "Dalian"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 38.92647002,
     "lng": 121.6270322,
@@ -1158,6 +1194,7 @@ window.SPOTS = [
       "kr": "대련역 뒷편 시장 통조림 가게",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1173,8 +1210,8 @@ window.SPOTS = [
       "en": "Busan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.117407,
     "lng": 129.048786,
@@ -1188,6 +1225,7 @@ window.SPOTS = [
       "kr": "부산항 국제여객터미널",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -1200,8 +1238,8 @@ window.SPOTS = [
       "en": "Shimonoseki"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 33.94808237,
     "lng": 130.9253681,
@@ -1215,6 +1253,7 @@ window.SPOTS = [
       "kr": "시모노세키항 국제여객터미널",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -1227,8 +1266,8 @@ window.SPOTS = [
       "en": "Shimonoseki"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 33.94381763,
     "lng": 130.9166657,
@@ -1242,6 +1281,7 @@ window.SPOTS = [
       "kr": "임겸상점 본사 Hayashikane Sangyo Co., Ltd. Head Office 林兼産業株式会社 本社",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -1254,8 +1294,8 @@ window.SPOTS = [
       "en": "Shimonoseki"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 33.95180917,
     "lng": 130.9351219,
@@ -1269,6 +1309,7 @@ window.SPOTS = [
       "kr": "東洋捕鯨株式會社",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -1281,8 +1322,8 @@ window.SPOTS = [
       "en": "Shimonoseki"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 33.95932231,
     "lng": 130.9487194,
@@ -1296,6 +1337,7 @@ window.SPOTS = [
       "kr": "아카마신궁 임겸상점 공양비 발견",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -1308,8 +1350,8 @@ window.SPOTS = [
       "en": "Incheon"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 37.479493,
     "lng": 126.612232,
@@ -1323,6 +1365,7 @@ window.SPOTS = [
       "kr": "구 임겸상점 제빙공장 (추정)",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -1335,8 +1378,8 @@ window.SPOTS = [
       "en": "Seoul"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 37.561106,
     "lng": 126.977375,
@@ -1350,6 +1393,7 @@ window.SPOTS = [
       "kr": "구 임겸상점 경성지점",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -1362,8 +1406,8 @@ window.SPOTS = [
       "en": "Dalian"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 38.92791353,
     "lng": 121.635587,
@@ -1377,6 +1421,7 @@ window.SPOTS = [
       "kr": "러시안 스타일 스트릿",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1392,8 +1437,8 @@ window.SPOTS = [
       "en": "Dalian"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 38.92013074,
     "lng": 121.6500396,
@@ -1407,6 +1452,7 @@ window.SPOTS = [
       "kr": "만철 본사",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1422,8 +1468,8 @@ window.SPOTS = [
       "en": "Dalian"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 38.92141336,
     "lng": 121.6492082,
@@ -1437,6 +1483,7 @@ window.SPOTS = [
       "kr": "만철 도서관",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1452,8 +1499,8 @@ window.SPOTS = [
       "en": "Dalian"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 38.92032975,
     "lng": 121.64437,
@@ -1467,6 +1514,7 @@ window.SPOTS = [
       "kr": "대련 야마토 호텔",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1482,8 +1530,8 @@ window.SPOTS = [
       "en": "Dalian"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 38.92236996,
     "lng": 121.6330564,
@@ -1497,6 +1545,7 @@ window.SPOTS = [
       "kr": "대련역",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1512,8 +1561,8 @@ window.SPOTS = [
       "en": "Dandong"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 40.12389081,
     "lng": 124.3874196,
@@ -1527,6 +1576,7 @@ window.SPOTS = [
       "kr": "단둥역",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1542,8 +1592,8 @@ window.SPOTS = [
       "en": "Dandong"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 39.98264858,
     "lng": 124.2596461,
@@ -1557,6 +1607,7 @@ window.SPOTS = [
       "kr": "단둥 해피푸드",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1572,8 +1623,8 @@ window.SPOTS = [
       "en": "Dandong"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 39.90549474,
     "lng": 124.2219234,
@@ -1587,6 +1638,7 @@ window.SPOTS = [
       "kr": "황금평",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1602,8 +1654,8 @@ window.SPOTS = [
       "en": "Dandong"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 40.11860975,
     "lng": 124.3934859,
@@ -1617,6 +1669,7 @@ window.SPOTS = [
       "kr": "압록강 단교",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1632,8 +1685,8 @@ window.SPOTS = [
       "en": "Dandong"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 39.90451,
     "lng": 124.15128,
@@ -1647,6 +1700,7 @@ window.SPOTS = [
       "kr": "수산시장",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1662,8 +1716,8 @@ window.SPOTS = [
       "en": "Dandong"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 40.13610778,
     "lng": 124.4127517,
@@ -1677,6 +1731,7 @@ window.SPOTS = [
       "kr": "위화도",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1692,8 +1747,8 @@ window.SPOTS = [
       "en": "Shenyang"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 41.79542418,
     "lng": 123.393412,
@@ -1707,6 +1762,7 @@ window.SPOTS = [
       "kr": "선양역",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1722,8 +1778,8 @@ window.SPOTS = [
       "en": "Shenyang"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 41.79759978,
     "lng": 123.4092048,
@@ -1737,6 +1793,7 @@ window.SPOTS = [
       "kr": "辽宁宾馆 / 구 Mukden 야마토 호텔",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1752,8 +1809,8 @@ window.SPOTS = [
       "en": "Shenyang"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 41.80604552,
     "lng": 123.408604,
@@ -1767,6 +1824,7 @@ window.SPOTS = [
       "kr": "서탑 코리안타운, 북조선산 건조명태 구입",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1782,8 +1840,8 @@ window.SPOTS = [
       "en": "Changchun"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 43.91085428,
     "lng": 125.3240889,
@@ -1797,6 +1855,7 @@ window.SPOTS = [
       "kr": "장춘역",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1812,8 +1871,8 @@ window.SPOTS = [
       "en": "Changchun"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 43.90880213,
     "lng": 125.3247535,
@@ -1827,6 +1886,7 @@ window.SPOTS = [
       "kr": "春谊宾馆 야마토호텔",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1842,8 +1902,8 @@ window.SPOTS = [
       "en": "Changchun"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 43.90323619,
     "lng": 125.3245988,
@@ -1857,6 +1917,7 @@ window.SPOTS = [
       "kr": "만철도서관 满铁图书馆旧址 Mantie Library Former Site",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1872,8 +1933,8 @@ window.SPOTS = [
       "en": "Changchun"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 43.85822161,
     "lng": 125.3100627,
@@ -1887,6 +1948,7 @@ window.SPOTS = [
       "kr": "장춘기숙사",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1902,8 +1964,8 @@ window.SPOTS = [
       "en": "Changchun"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 43.99558941,
     "lng": 125.6970903,
@@ -1917,6 +1979,7 @@ window.SPOTS = [
       "kr": "장춘 공항",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1932,8 +1995,8 @@ window.SPOTS = [
       "en": "Yanji"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 42.88907276,
     "lng": 129.4461794,
@@ -1947,6 +2010,7 @@ window.SPOTS = [
       "kr": "연변 공항 Yanji Airport 延吉机场",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1962,8 +2026,8 @@ window.SPOTS = [
       "en": "Yanji"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "중국",
+      "en": "China"
     },
     "lat": 42.91275653,
     "lng": 129.5049277,
@@ -1977,6 +2041,7 @@ window.SPOTS = [
       "kr": "동방수상시장 东方水上市场",
       "en": ""
     },
+    "status": "",
     "workIds": [
       "OP_chamber_2025",
       "OP_incheon_2025"
@@ -1992,8 +2057,8 @@ window.SPOTS = [
       "en": "Ulsan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.483101,
     "lng": 129.423863,
@@ -2007,6 +2072,7 @@ window.SPOTS = [
       "kr": "구 임겸상점 사무소",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2019,8 +2085,8 @@ window.SPOTS = [
       "en": "Ulsan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Korea"
     },
     "lat": 35.481373,
     "lng": 129.425378,
@@ -2034,6 +2100,7 @@ window.SPOTS = [
       "kr": "방어진 방파제 축조 기념비",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2046,8 +2113,8 @@ window.SPOTS = [
       "en": "Miyazu"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 35.53617808,
     "lng": 135.2002436,
@@ -2061,6 +2128,7 @@ window.SPOTS = [
       "kr": "미야즈 경찰서 (구 교토 수산강습소)",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2073,8 +2141,8 @@ window.SPOTS = [
       "en": "Miyazu"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 35.56312616,
     "lng": 135.2427282,
@@ -2088,6 +2156,7 @@ window.SPOTS = [
       "kr": "다케나카 통조림 본사, 공장",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2100,8 +2169,8 @@ window.SPOTS = [
       "en": "Miyazu"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 35.55124133,
     "lng": 135.2344527,
@@ -2115,6 +2184,7 @@ window.SPOTS = [
       "kr": "京都府立海洋高等学校 Kyoto Prefectural Kaiyo Senior High School",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2127,8 +2197,8 @@ window.SPOTS = [
       "en": "Maizuru"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 35.47472892,
     "lng": 135.3851417,
@@ -2142,6 +2212,7 @@ window.SPOTS = [
       "kr": "마이즈루 해군 진수부 아카렌카 赤れんが3号棟 まいづる智恵蔵（旧舞鶴海軍兵器廠 弾丸庫並小銃庫）",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2154,8 +2225,8 @@ window.SPOTS = [
       "en": "Kyoto"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 35.03322919,
     "lng": 135.7242999,
@@ -2169,6 +2240,7 @@ window.SPOTS = [
       "kr": "리쓰메이칸대학 가와하라 노리후미 교수 인터뷰, 연구협조",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2181,8 +2253,8 @@ window.SPOTS = [
       "en": "Akashi"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 34.64488486,
     "lng": 134.9686126,
@@ -2196,6 +2268,7 @@ window.SPOTS = [
       "kr": "나카베 이쿠지로 출생지",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2208,8 +2281,8 @@ window.SPOTS = [
       "en": "Akashi"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 34.65036292,
     "lng": 134.9915414,
@@ -2223,6 +2296,7 @@ window.SPOTS = [
       "kr": "나카베 이쿠지로 동상 中部幾次郎翁銅像",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2235,8 +2309,8 @@ window.SPOTS = [
       "en": "Akashi"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "일본",
+      "en": "Japan"
     },
     "lat": 34.64524362,
     "lng": 134.9936634,
@@ -2250,6 +2324,7 @@ window.SPOTS = [
       "kr": "나카베 이쿠지로 묘비",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2262,8 +2337,8 @@ window.SPOTS = [
       "en": "Naju"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Japan"
     },
     "lat": 35.032367,
     "lng": 126.71706,
@@ -2277,6 +2352,7 @@ window.SPOTS = [
       "kr": "나주곰탕 하얀집",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2289,8 +2365,8 @@ window.SPOTS = [
       "en": "Naju"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Japan"
     },
     "lat": 35.033235,
     "lng": 126.724585,
@@ -2304,6 +2380,7 @@ window.SPOTS = [
       "kr": "구 다케나카, 화남산업",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2316,8 +2393,8 @@ window.SPOTS = [
       "en": "Jeju"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "한국",
+      "en": "Japan"
     },
     "lat": 33.404129,
     "lng": 126.25891,
@@ -2331,6 +2408,7 @@ window.SPOTS = [
       "kr": "제주 다케나카 통조림 공장 터",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2343,8 +2421,8 @@ window.SPOTS = [
       "en": "Kaohsiung"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.61875551,
     "lng": 120.2858524,
@@ -2358,6 +2436,7 @@ window.SPOTS = [
       "kr": "",
       "en": "Artist Residency in Kaohsiung, Pier-2 Artist Residency (PAIR), Research on canned food in Taiwan"
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2370,8 +2449,8 @@ window.SPOTS = [
       "en": "Kaohsiung"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.61958091,
     "lng": 120.2702898,
@@ -2385,6 +2464,7 @@ window.SPOTS = [
       "kr": "原高雄魚市株式會社事務所",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2397,8 +2477,8 @@ window.SPOTS = [
       "en": "Gangshan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.789557,
     "lng": 120.2914708,
@@ -2412,6 +2492,7 @@ window.SPOTS = [
       "kr": "樂群村 낙군촌 공군 권촌 우육면 발상지설",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2424,8 +2505,8 @@ window.SPOTS = [
       "en": "Gangshan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.78368052,
     "lng": 120.2854781,
@@ -2439,6 +2520,7 @@ window.SPOTS = [
       "kr": "醒村 구 일본해군항공대 강산 숙소군",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2451,8 +2533,8 @@ window.SPOTS = [
       "en": "Gangshan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.78588829,
     "lng": 120.2955587,
@@ -2466,6 +2548,7 @@ window.SPOTS = [
       "kr": "두반장",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2478,8 +2561,8 @@ window.SPOTS = [
       "en": "Gangshan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.78945176,
     "lng": 120.2856369,
@@ -2493,6 +2576,7 @@ window.SPOTS = [
       "kr": "國軍左營總醫院岡山分院",
       "en": "Kaohsiung Armed Forces General Hospital Gangshan Branch"
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2505,8 +2589,8 @@ window.SPOTS = [
       "en": "Gangshan"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.78226718,
     "lng": 120.2841971,
@@ -2520,6 +2604,7 @@ window.SPOTS = [
       "kr": "欣欣市場, 옛 眷村市場",
       "en": ""
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2532,8 +2617,8 @@ window.SPOTS = [
       "en": "Yunlin"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 23.70581364,
     "lng": 120.5260938,
@@ -2547,6 +2632,7 @@ window.SPOTS = [
       "kr": "欣欣生技食品股份有限公司",
       "en": "Hsin Hsin Biotech Co., Ltd"
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2559,8 +2645,8 @@ window.SPOTS = [
       "en": "Kaohsiung"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.62609448,
     "lng": 120.2966581,
@@ -2574,6 +2660,7 @@ window.SPOTS = [
       "kr": "",
       "en": "New International Restaurant"
     },
+    "status": "",
     "workIds": [],
     "images": []
   },
@@ -2586,8 +2673,8 @@ window.SPOTS = [
       "en": "Kaohsiung"
     },
     "country": {
-      "kr": "",
-      "en": ""
+      "kr": "대만",
+      "en": "Taiwan"
     },
     "lat": 22.6926911,
     "lng": 120.2890739,
@@ -2601,6 +2688,7 @@ window.SPOTS = [
       "kr": "再見捌捌陸-臺灣眷村文化園區",
       "en": "Farewell 886- Cultural Park of Taiwan Military Veteran Village"
     },
+    "status": "",
     "workIds": [],
     "images": []
   }

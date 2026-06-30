@@ -31,12 +31,12 @@
   header{position:absolute;top:0;left:0;right:0;z-index:1000;
     display:flex;align-items:center;justify-content:space-between;
     padding:18px 24px;pointer-events:none}
-  .brand{pointer-events:auto;font-family:var(--serif);font-size:19px;font-weight:600;
+  .brand{pointer-events:auto;font-family:var(--serif);
     letter-spacing:.01em;color:var(--ink);
     background:rgba(18,21,27,.78);backdrop-filter:blur(8px);
-    padding:7px 15px;border-radius:2px}
-  .brand small{font-family:var(--sans);font-weight:400;font-size:11px;
-    color:var(--ink-soft);display:block;letter-spacing:.08em;text-transform:uppercase;margin-top:1px}
+    padding:9px 15px;border-radius:2px;display:flex;flex-direction:column;line-height:1.25}
+  .brand-kr{font-size:18px;font-weight:600}
+  .brand-en{font-size:11px;font-weight:400;color:var(--ink-soft);letter-spacing:.06em}
   .top-right{pointer-events:auto;display:flex;gap:8px;align-items:center}
   .lang{display:flex;background:rgba(18,21,27,.78);backdrop-filter:blur(8px);
     border-radius:2px;overflow:hidden;border:1px solid var(--line)}
@@ -61,6 +61,111 @@
   .spot-marker{border-radius:50%;border:1.5px solid rgba(255,255,255,.85);
     cursor:pointer;transition:transform .12s}
   .spot-marker:hover{transform:scale(1.4)}
+  /* 전시 마커: 속 빈 다이아몬드 */
+  .exh-marker{border:2px solid #fff;background:transparent;
+    transform:rotate(45deg);cursor:pointer;transition:transform .12s}
+  .exh-marker:hover{transform:rotate(45deg) scale(1.4)}
+  /* Now / Upcoming 맥동 마커 */
+  .now-marker{position:relative;width:16px;height:16px;cursor:pointer}
+  .now-core{position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;
+    background:#fff;transform:translate(-50%,-50%);box-shadow:0 0 8px 2px rgba(255,255,255,.9);z-index:2}
+  .now-pulse{position:absolute;left:50%;top:50%;width:16px;height:16px;border-radius:50%;
+    background:rgba(255,255,255,.6);transform:translate(-50%,-50%);
+    animation:nowPulse 1.8s ease-out infinite;z-index:1}
+  .now-marker.upcoming .now-core{background:#ffd24a;box-shadow:0 0 8px 2px rgba(255,210,74,.9)}
+  .now-marker.upcoming .now-pulse{background:rgba(255,210,74,.55)}
+  @keyframes nowPulse{0%{width:10px;height:10px;opacity:.85}100%{width:38px;height:38px;opacity:0}}
+  @media(prefers-reduced-motion:reduce){.now-pulse{animation:none;opacity:.4}}
+
+  /* ---- 상단 중앙 뷰 탭 (MAP/IMAGE/TEXT) ---- */
+  .view-tabs{position:absolute;top:18px;left:50%;transform:translateX(-50%);z-index:1000;
+    display:flex;gap:2px;pointer-events:auto;
+    background:rgba(18,21,27,.78);backdrop-filter:blur(8px);
+    border:1px solid var(--line);border-radius:3px;padding:3px}
+  .view-tab{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.08em;
+    border:0;background:transparent;color:var(--ink-soft);padding:7px 18px;cursor:pointer;
+    border-radius:2px;transition:all .15s}
+  .view-tab.on{background:var(--ink);color:var(--paper)}
+  .view-tab:not(.on):hover{color:var(--ink)}
+
+  /* ---- 범례 내 섹션 + 레이어 체크박스 ---- */
+  .legend-section{margin-bottom:14px}
+  .legend-section:last-child{margin-bottom:0;padding-top:14px;border-top:1px solid var(--line)}
+  .check-item{display:flex;align-items:center;gap:9px;padding:5px 0;cursor:pointer;
+    user-select:none;font-size:13.5px;color:var(--ink);transition:opacity .15s}
+  .check-item .cbox{width:15px;height:15px;border:1.5px solid var(--ink-soft);border-radius:3px;
+    flex-shrink:0;position:relative;transition:all .15s}
+  .check-item.on .cbox{background:var(--ink);border-color:var(--ink)}
+  .check-item.on .cbox::after{content:'';position:absolute;left:4px;top:1px;width:4px;height:8px;
+    border:solid var(--paper);border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .check-item.off{opacity:.55}
+
+  /* ---- 이미지/텍스트 오버레이 뷰 ---- */
+  .overlay-view{position:absolute;inset:0;z-index:900;background:var(--paper);
+    overflow-y:auto;display:none;padding:80px 40px 40px}
+  .overlay-view.show{display:block}
+  .overlay-inner{max-width:1200px;margin:0 auto}
+  @media(max-width:600px){ .overlay-view{padding:72px 16px 24px} }
+
+  .iv-head{margin-bottom:20px}
+  .iv-head h2{font-size:22px;font-weight:600;margin-bottom:5px}
+  .iv-head p{font-size:13px;color:var(--ink-soft)}
+  /* 시리즈 필터 칩 */
+  .iv-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;
+    padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .iv-chip{font-family:var(--sans);font-size:12.5px;font-weight:500;cursor:pointer;
+    background:transparent;color:var(--ink-soft);border:1px solid var(--line);
+    border-radius:30px;padding:6px 15px;transition:all .15s}
+  .iv-chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .iv-chip.all-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .iv-chip:hover{border-color:var(--ink-soft)}
+  /* 시리즈 블록 */
+  .iv-series{margin-bottom:46px}
+  .iv-series-title{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:600;margin-bottom:16px}
+  .iv-bar{width:4px;height:18px;background:var(--ink);border-radius:2px;display:inline-block}
+  .iv-rowlabel{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-soft);margin:18px 0 11px}
+  .iv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+  .iv-card{cursor:pointer;transition:transform .15s}
+  .iv-card:hover{transform:translateY(-3px)}
+  .iv-thumb{position:relative;width:100%;aspect-ratio:4/3;border-radius:3px;overflow:hidden;
+    background:var(--paper-2);border:1px solid var(--line)}
+  .iv-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .iv-noimg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+    font-size:26px;color:var(--ink-soft);opacity:.4}
+  .iv-badge{position:absolute;top:8px;left:8px;z-index:1;font-size:10px;font-weight:600;
+    letter-spacing:.06em;background:rgba(13,15,20,.82);color:#fff;padding:3px 8px;border-radius:2px}
+  .iv-exh .iv-thumb{border-color:#3a3f48}
+  .iv-cap{padding:9px 2px 0}
+  .iv-t{font-size:14px;font-weight:500;margin-bottom:2px;line-height:1.35}
+  .iv-s{font-size:12px;color:var(--ink-soft)}
+  .iv-credit{font-size:11px;color:var(--ink-soft);opacity:.8;margin-top:3px}
+  .credit-line{font-size:12px;color:var(--ink-soft);margin:-8px 0 16px;font-style:italic}
+
+  .tv-section{margin-bottom:30px;max-width:760px}
+  .tv-section h3{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-soft);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:12px}
+  .tv-item{padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer;transition:padding-left .15s}
+  .tv-item:hover{padding-left:6px}
+  .tv-t{font-size:15px;font-weight:500}
+  .tv-a{font-size:12.5px;color:var(--ink-soft);margin-top:2px}
+  .tv-cv{display:grid;grid-template-columns:54px 1fr;gap:4px 14px;padding:9px 0;
+    border-bottom:1px solid var(--line);cursor:pointer;align-items:baseline;transition:padding-left .15s}
+  .tv-cv:hover{padding-left:6px}
+  .tv-year{font-size:13px;font-weight:600;color:var(--ink-soft);display:flex;align-items:center;gap:7px}
+  .tv-cvt{font-size:15px;font-weight:500}
+  .tv-cvm{grid-column:2;font-size:12.5px;color:var(--ink-soft)}
+  .cv-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+  .tv-t{display:flex;align-items:center;gap:8px}
+  /* Contact */
+  .tv-contact .ct-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 0}
+  .ct-email{font-size:15px;font-weight:500;font-feature-settings:'tnum'}
+  .ct-btn{font-family:var(--sans);font-size:12px;font-weight:500;cursor:pointer;
+    background:transparent;color:var(--ink);border:1px solid var(--line);
+    border-radius:3px;padding:5px 12px;text-decoration:none;transition:all .15s}
+  .ct-btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .ct-link{font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+  .ct-link:hover{border-color:var(--ink)}
 
   /* ---- 장소창(우측 패널) ---- */
   .panel{position:absolute;top:0;right:0;height:100%;width:min(420px,90vw);z-index:1200;
@@ -111,8 +216,14 @@
 <body>
   <div id="map"></div>
 
+  <div class="view-tabs" id="view-tabs">
+    <button class="view-tab on" data-view="map" onclick="setView('map')">MAP</button>
+    <button class="view-tab" data-view="image" onclick="setView('image')">IMAGE</button>
+    <button class="view-tab" data-view="text" onclick="setView('text')">TEXT</button>
+  </div>
+
   <header>
-    <div class="brand" id="brand">작가 포트폴리오<small>RESEARCH · WORK · EXHIBITION</small></div>
+    <div class="brand" id="brand"><span class="brand-kr">최가영</span><span class="brand-en">Kayoung Choi</span></div>
     <div class="top-right">
       <div class="lang">
         <button id="lang-kr" class="on" onclick="setLang('kr')">KR</button>
@@ -122,14 +233,34 @@
   </header>
 
   <div class="legend" id="legend">
-    <h4 id="legend-title">리서치</h4>
+    <div class="legend-section" id="layer-toggles">
+      <label class="check-item" id="toggle-research" onclick="toggleLayer('research')">
+        <span class="cbox"></span><span id="tg-research-label">Research</span>
+      </label>
+      <label class="check-item" id="toggle-exhibition" onclick="toggleLayer('exhibition')">
+        <span class="cbox"></span><span id="tg-exhibition-label">Exhibition</span>
+      </label>
+      <label class="check-item" id="toggle-now" onclick="toggleLayer('now')">
+        <span class="cbox"></span><span id="tg-now-label">Now &amp; Upcoming</span>
+      </label>
+    </div>
+    <div class="legend-section" id="research-legend"></div>
   </div>
+
+  <!-- 이미지 / 텍스트 뷰 (지도 위에 덮이는 전체화면 레이어) -->
+  <section class="overlay-view" id="image-view">
+    <div class="overlay-inner" id="image-view-inner"></div>
+  </section>
+  <section class="overlay-view" id="text-view">
+    <div class="overlay-inner" id="text-view-inner"></div>
+  </section>
 
   <aside class="panel" id="panel">
     <button class="panel-close" onclick="closePanel()" aria-label="닫기">✕</button>
     <div class="panel-scroll" id="panel-scroll"></div>
   </aside>
 
+<script src="config.js"></script>
 <script src="data.js"></script>
 <script>
 /* =========================================================
@@ -148,14 +279,42 @@ const exhibitionsOfWork = {};
 WORK_EXHIBITIONS.forEach(we => {
   (exhibitionsOfWork[we.workId] ||= []).push(we.exhibitionId);
 });
+/* 전시 → 그 전시에 나온 작업들 (역방향) */
+const worksOfExhibition = {};
+WORK_EXHIBITIONS.forEach(we => {
+  (worksOfExhibition[we.exhibitionId] ||= []).push(we.workId);
+});
+
+/* 도시 이름 → 대략적 좌표 사전.
+   전시 데이터에 lat/lng가 직접 있으면 그것을 우선 사용하고,
+   없으면 도시명(en)으로 이 사전에서 좌표를 찾아 지도에 찍습니다.
+   새 전시 도시가 생기면 여기에 한 줄 추가하면 됩니다. */
+const CITY_COORDS = {
+  'Seoul':[37.5665,126.9780], 'Incheon':[37.4563,126.7052],
+  'Ansan':[37.3219,126.8309], 'Busan':[35.1796,129.0756],
+  'Tokyo':[35.6762,139.6503], 'Kyoto':[35.0116,135.7681],
+  'Niš':[43.3209,21.8958], 'Pirot':[43.1531,22.5861],
+  'Ólafsfjörður':[66.0726,-18.6566], 'Kaohsiung':[22.6273,120.3014],
+};
+/* 도시명에서 괄호·슬래시 뒷부분 제거하고 첫 도시만 사용 */
+function cityKey(en){
+  if(!en) return '';
+  return en.split('/')[0].split('(')[0].trim();
+}
+/* 전시의 좌표를 구함 (직접 lat/lng > 도시 사전) */
+function exhCoord(e){
+  if(e.lat!=null && e.lng!=null) return [e.lat, e.lng];
+  const c = CITY_COORDS[cityKey(e.city && e.city.en)];
+  return c || null;
+}
 
 const t = (obj) => obj ? (obj[LANG] || obj.kr || obj.en || '') : '';
 
 /* =========================================================
    지도
    ========================================================= */
-const map = L.map('map', { zoomControl:true, worldCopyJump:true }).setView([30,40], 3);
-L.control.zoom({ position:'bottomright' });
+const map = L.map('map', { zoomControl:false, worldCopyJump:true }).setView([30,40], 3);
+L.control.zoom({ position:'bottomright' }).addTo(map);
 
 /* 지도 배경 타일 — 야간 다크 테마.
    1순위: CARTO 다크맵(어두운 바탕에 은은한 지명). 안정적이고 깔끔함.
@@ -187,34 +346,127 @@ function dotIcon(color, big){
     html:`<div class="spot-marker" style="width:${s}px;height:${s}px;background:${color};box-shadow:0 0 8px 2px ${color}, 0 0 3px 1px rgba(255,255,255,.6)"></div>`
   });
 }
+/* 전시 마커: 속이 빈 다이아몬드(◇) — 리서치 장소(●)와 한눈에 구분 */
+function exhIcon(color){
+  const s = 13;
+  return L.divIcon({
+    className:'', iconSize:[s,s], iconAnchor:[s/2,s/2],
+    html:`<div class="exh-marker" style="width:${s}px;height:${s}px;border-color:${color};box-shadow:0 0 7px 1px ${color}"></div>`
+  });
+}
+/* Now/Upcoming 마커: 맥동하는 흰색 표식 (현재/예정을 강조) */
+function nowIcon(kind){
+  const s = 16;
+  const cls = kind==='upcoming' ? 'now-marker upcoming' : 'now-marker';
+  return L.divIcon({
+    className:'', iconSize:[s,s], iconAnchor:[s/2,s/2],
+    html:`<div class="${cls}"><span class="now-pulse"></span><span class="now-core"></span></div>`
+  });
+}
+/* 두 점 사이 부드러운 곡선(맥락선)용 중간점 계산 */
+function curvePoints(a, b){
+  const lat1=a[0],lng1=a[1],lat2=b[0],lng2=b[1];
+  const mLat=(lat1+lat2)/2, mLng=(lng1+lng2)/2;
+  // 수직 방향으로 살짝 부풀려 곡선처럼 보이게
+  const dx=lng2-lng1, dy=lat2-lat1;
+  const off=0.15;
+  const cLat=mLat - dx*off, cLng=mLng + dy*off;
+  const pts=[]; const steps=24;
+  for(let i=0;i<=steps;i++){
+    const tt=i/steps, u=1-tt;
+    pts.push([
+      u*u*lat1 + 2*u*tt*cLat + tt*tt*lat2,
+      u*u*lng1 + 2*u*tt*cLng + tt*tt*lng2
+    ]);
+  }
+  return pts;
+}
 
 let spotMarkers = []; // {marker, spot}
+
+/* 표시 토글 상태 */
+const show = { research:true, exhibition:true, now:true };
 
 function drawMap(){
   markerLayer.clearLayers();
   lineLayer.clearLayers();
   spotMarkers = [];
 
-  // 리서치별로 묶어 여정선 + 마커
+  // 리서치별로 묶어 여정선 + 리서치 장소 마커
   RESEARCHES.forEach(r => {
     if(!activeResearch.has(r.id)) return;
     const spots = SPOTS
       .filter(s => s.researchId === r.id && s.lat!=null && s.lng!=null)
       .sort((a,b)=>(a.order||0)-(b.order||0));
 
-    // 여정선 (order가 있는 점들만, 2개 이상일 때)
-    const pts = spots.filter(s=>s.order).map(s=>[s.lat,s.lng]);
-    if(pts.length>=2){
-      L.polyline(pts, {color:r.color, weight:1.6, opacity:.5, dashArray:'1 6', lineCap:'round'}).addTo(lineLayer);
+    // 여정선 (리서치 장소들 사이, 촘촘한 점선)
+    if(show.research){
+      const pts = spots.filter(s=>s.order).map(s=>[s.lat,s.lng]);
+      if(pts.length>=2){
+        L.polyline(pts, {color:r.color, weight:1.6, opacity:.5, dashArray:'1 6', lineCap:'round'}).addTo(lineLayer);
+      }
+      // 리서치 장소 마커 (원 ●)
+      spots.forEach(s=>{
+        const m = L.marker([s.lat,s.lng], {icon:dotIcon(r.color)}).addTo(markerLayer);
+        m.on('click', ()=>openSpot(s.id));
+        m.bindTooltip(`${t(s.name)} · ${t(r.name)}`, {direction:'top', offset:[0,-8], opacity:.92});
+        spotMarkers.push({marker:m, spot:s});
+      });
     }
-    // 마커
-    spots.forEach(s=>{
-      const m = L.marker([s.lat,s.lng], {icon:dotIcon(r.color)}).addTo(markerLayer);
-      m.on('click', ()=>openSpot(s.id));
-      m.bindTooltip(`${t(s.name)} · ${t(r.name)}`, {direction:'top', offset:[0,-8], opacity:.92});
-      spotMarkers.push({marker:m, spot:s});
-    });
   });
+
+  // 전시 마커 (다이아몬드 ◇) + 맥락선 (리서치 장소 → 전시 장소, 곡선)
+  if(show.exhibition){
+    EXHIBITIONS.forEach(e=>{
+      const coord = exhCoord(e);
+      if(!coord) return;
+      // 이 전시에 나온 작업들이 속한 리서치 색 (첫 번째 기준)
+      const wIds = worksOfExhibition[e.id] || [];
+      const firstWork = wIds.map(id=>byId.work[id]).filter(Boolean)[0];
+      const rId = firstWork && (firstWork.researchIds||[])[0];
+      const rsch = rId && byId.research[rId];
+      // 토글로 그 리서치가 꺼져 있으면 전시도 숨김(맥락 일관성)
+      if(rsch && !activeResearch.has(rsch.id)) return;
+      const color = rsch ? rsch.color : '#cccccc';
+
+      // 맥락선: 이 전시에 나온 작업의 리서치 장소들 → 전시 장소 (곡선)
+      wIds.map(id=>byId.work[id]).filter(Boolean).forEach(w=>{
+        (w.researchIds||[]).forEach(researchId=>{
+          // 그 리서치의 마지막(또는 대표) 장소에서 전시로 선을 그음
+          const rspots = SPOTS.filter(s=>s.researchId===researchId && s.lat!=null && s.lng!=null)
+                              .sort((a,b)=>(a.order||0)-(b.order||0));
+          const from = rspots[rspots.length-1];
+          if(from){
+            L.polyline(curvePoints([from.lat,from.lng], coord),
+              {color:color, weight:1.2, opacity:.35, dashArray:'5 7', lineCap:'round'}).addTo(lineLayer);
+          }
+        });
+      });
+
+      const m = L.marker(coord, {icon:exhIcon(color)}).addTo(markerLayer);
+      m.on('click', ()=>openExhibition(e.id));
+      m.bindTooltip(`${t(e.title)||t(e.venue)||''} · ${t(e.city)} ${e.year||''}`,
+        {direction:'top', offset:[0,-8], opacity:.92});
+    });
+  }
+
+  // Now & Upcoming 마커 (현재 작업지 + 예정 전시) — 맥동하는 흰 마커
+  if(show.now){
+    // status='now' 인 spot
+    SPOTS.filter(s=>s.status==='now' && s.lat!=null && s.lng!=null).forEach(s=>{
+      const m = L.marker([s.lat,s.lng], {icon:nowIcon('now')}).addTo(markerLayer);
+      m.on('click', ()=>openSpot(s.id));
+      m.bindTooltip(`NOW · ${t(s.name)}`, {direction:'top', offset:[0,-10], opacity:.95});
+    });
+    // status='upcoming' 인 전시
+    EXHIBITIONS.filter(e=>e.status==='upcoming').forEach(e=>{
+      const coord = exhCoord(e);
+      if(!coord) return;
+      const m = L.marker(coord, {icon:nowIcon('upcoming')}).addTo(markerLayer);
+      m.on('click', ()=>openExhibition(e.id));
+      m.bindTooltip(`UPCOMING · ${t(e.title)||t(e.venue)||''}`, {direction:'top', offset:[0,-10], opacity:.95});
+    });
+  }
 }
 
 /* =========================================================
@@ -282,7 +534,7 @@ function openWork(workId){
   let html = `<div class="panel-hero">
     <span class="panel-eyebrow">${LANG==='kr'?'작업':'Work'}</span>
     <div class="panel-title">${t(w.title)||t(w.series)||w.id}</div>
-    <div class="panel-sub">${[t(w.series), w.year, t(w.medium)].filter(Boolean).join(' · ')}</div>
+    <div class="panel-sub">${[t(w.series), w.year, t(w.medium), t(w.dimensions)].filter(Boolean).join(' · ')}</div>
   </div><div class="panel-body">`;
 
   if(w.thumbnail || (w.images&&w.images.length)){
@@ -294,7 +546,7 @@ function openWork(workId){
   if(exhs.length){
     html += `<div class="section-label">${LANG==='kr'?'전시':'Exhibitions'}</div>`;
     exhs.forEach(e=>{
-      html += `<div class="work-card">
+      html += `<div class="work-card" onclick="openExhibition('${e.id}')">
         <div class="wt">${t(e.title)||t(e.venue)||''}</div>
         <div class="ws">${[t(e.venue),t(e.city),e.year].filter(Boolean).join(' · ')}</div>
       </div>`;
@@ -305,13 +557,320 @@ function openWork(workId){
   document.getElementById('panel').classList.add('open');
 }
 
+/* 전시 상세 패널 */
+function openExhibition(exhId){
+  const e = byId.exh[exhId];
+  if(!e) return;
+  const works = (worksOfExhibition[e.id]||[]).map(id=>byId.work[id]).filter(Boolean);
+  const typeLabel = e.type==='solo' ? (LANG==='kr'?'개인전':'Solo') : (LANG==='kr'?'단체전':'Group');
+
+  let html = `<div class="panel-hero">
+    <span class="panel-eyebrow">${LANG==='kr'?'전시':'Exhibition'} · ${typeLabel}</span>
+    <div class="panel-title">${t(e.title)||t(e.venue)||''}</div>
+    <div class="panel-sub">${[t(e.venue), t(e.city), t(e.country)].filter(Boolean).join(', ')}</div>
+    <div class="panel-meta">
+      ${exhPeriod(e)?`<span>${exhPeriod(e)}</span>`:''}
+    </div>
+  </div><div class="panel-body">`;
+
+  if(e.images && e.images.length){
+    html += `<div class="img-grid">`+e.images.map(u=>`<img src="${u}" loading="lazy" alt="">`).join('')+`</div>`;
+    if(t(e.photoCredit)) html += `<div class="credit-line">${LANG==='kr'?'사진: ':'Photo: '}${t(e.photoCredit)}</div>`;
+  }
+  if(works.length){
+    html += `<div class="section-label">${LANG==='kr'?'출품 작업':'Works shown'}</div>`;
+    works.forEach(w=>{
+      html += `<div class="work-card" onclick="openWork('${w.id}')">
+        <div class="wt">${t(w.title)||t(w.series)||w.id}</div>
+        <div class="ws">${[t(w.series), w.year].filter(Boolean).join(' · ')}</div>
+      </div>`;
+    });
+  }
+  html += `</div>`;
+  document.getElementById('panel-scroll').innerHTML = html;
+  document.getElementById('panel').classList.add('open');
+  const coord = exhCoord(e);
+  if(coord) map.panTo(coord, {animate:true});
+}
+
 function closePanel(){ document.getElementById('panel').classList.remove('open'); }
+
+/* 레이어 토글 (리서치 장소 / 전시 장소) */
+function toggleLayer(which){
+  show[which] = !show[which];
+  document.getElementById('toggle-'+which).classList.toggle('on', show[which]);
+  drawMap();
+}
+
+/* =========================================================
+   화면 전환 (MAP / IMAGE / TEXT)
+   ========================================================= */
+let currentView = 'map';
+function setView(v){
+  currentView = v;
+  document.querySelectorAll('.view-tab').forEach(b=>b.classList.toggle('on', b.dataset.view===v));
+  document.getElementById('image-view').classList.toggle('show', v==='image');
+  document.getElementById('text-view').classList.toggle('show', v==='text');
+  // 지도 위 UI(범례)는 지도일 때만 의미가 크므로 이미지/텍스트에선 살짝 가림
+  document.getElementById('legend').style.display = (v==='map') ? '' : 'none';
+  closePanel();
+  if(v==='image') buildImageView();
+  if(v==='text') buildTextView();
+  if(v==='map') setTimeout(()=>map.invalidateSize(), 50);
+}
+
+/* =========================================================
+   이미지 뷰 — 시리즈별 분류
+   ========================================================= */
+/* 시리즈 색상: data.js에 window.SERIES_COLORS가 있으면 그 값을 우선 사용,
+   없으면 그 시리즈 작품이 속한 리서치 색을 자동으로 가져옴.
+   → 색만 바꾸고 싶으면 data.js의 SERIES_COLORS만 수정하면 됩니다. */
+function seriesColor(seriesKey, workIds){
+  if(window.SERIES_COLORS && window.SERIES_COLORS[seriesKey]) return window.SERIES_COLORS[seriesKey];
+  // 작품 → 리서치 → 색
+  for(const wid of (workIds||[])){
+    const w = byId.work[wid];
+    const rid = w && (w.researchIds||[])[0];
+    const r = rid && byId.research[rid];
+    if(r && r.color) return r.color;
+  }
+  return '#888888';
+}
+
+/* 시리즈 목록을 작품에서 추출 (등장 순서 유지) */
+function getSeriesList(){
+  const seen = new Map();
+  WORKS.forEach(w=>{
+    const key = (w.series && (w.series.kr || w.series.en)) || '(미분류)';
+    if(!seen.has(key)) seen.set(key, {key, series:w.series, workIds:[]});
+    seen.get(key).workIds.push(w.id);
+  });
+  return [...seen.values()];
+}
+const activeSeries = new Set(getSeriesList().map(s=>s.key)); // 켜진 시리즈
+
+function buildImageView(){
+  const box = document.getElementById('image-view-inner');
+  const seriesList = getSeriesList();
+
+  // 상단 시리즈 필터 칩 (다중 토글, 시리즈 색 적용)
+  let chips = `<div class="iv-chips">`;
+  chips += `<button class="iv-chip${activeSeries.size===seriesList.length?' all-on':''}" onclick="toggleAllSeries()">${LANG==='kr'?'전체':'All'}</button>`;
+  seriesList.forEach(s=>{
+    const on = activeSeries.has(s.key);
+    const col = seriesColor(s.key, s.workIds);
+    const style = on ? `style="background:${col};border-color:${col};color:#fff"` : `style="border-color:${col};color:${col}"`;
+    chips += `<button class="iv-chip${on?' on':''}" ${style} onclick="toggleSeries('${encodeURIComponent(s.key)}')">${t(s.series)||s.key}</button>`;
+  });
+  chips += `</div>`;
+
+  let html = `<div class="iv-head">
+    <h2>${LANG==='kr'?'작업 · 전시':'Works · Exhibitions'}</h2>
+    <p>${LANG==='kr'?'시리즈별 작품 도판과 전시 전경입니다. 이미지를 클릭하면 상세로 이동합니다.':'Works and installation views by series. Click an image for details.'}</p>
+  </div>${chips}`;
+
+  // 시리즈별 블록
+  seriesList.forEach(s=>{
+    if(!activeSeries.has(s.key)) return;
+    const works = s.workIds.map(id=>byId.work[id]).filter(Boolean);
+    const col = seriesColor(s.key, s.workIds);
+
+    // 이 시리즈 작품들이 나간 전시 (중복 제거)
+    const exhIds = new Set();
+    works.forEach(w=>(exhibitionsOfWork[w.id]||[]).forEach(eid=>exhIds.add(eid)));
+    const exhs = [...exhIds].map(id=>byId.exh[id]).filter(e=>e && e.images && e.images.length);
+
+    html += `<section class="iv-series">
+      <h3 class="iv-series-title"><span class="iv-bar" style="background:${col}"></span>${t(s.series)||s.key}</h3>`;
+
+    // 작품 도판 줄
+    html += `<div class="iv-rowlabel">${LANG==='kr'?'작품':'Works'}</div><div class="iv-grid">`;
+    works.forEach(w=>{
+      const img = w.thumbnail || (w.images&&w.images[0]) || '';
+      // 작품 캡션: 제목 / 제작연도 · 재료 · 규격
+      const meta = [w.year, t(w.medium), t(w.dimensions)].filter(Boolean).join(' · ');
+      html += `<div class="iv-card" onclick="openWork('${w.id}')">
+        <div class="iv-thumb">${img?`<img src="${img}" loading="lazy" alt="">`:`<div class="iv-noimg" style="color:${col};opacity:.5">●</div>`}</div>
+        <div class="iv-cap"><div class="iv-t">${t(w.title)||t(w.series)||w.id}</div>
+          <div class="iv-s">${meta}</div></div>
+      </div>`;
+    });
+    html += `</div>`;
+
+    // 전시 전경 줄
+    if(exhs.length){
+      html += `<div class="iv-rowlabel">${LANG==='kr'?'전시 전경':'Installation views'}</div><div class="iv-grid">`;
+      exhs.forEach(e=>{
+        // 전시 캡션: 전시형태 《제목》 전시 전경 / 전시장소 · 전시기간 / 사진: 크레딧
+        html += `<div class="iv-card iv-exh" onclick="openExhibition('${e.id}')">
+          <div class="iv-thumb"><span class="iv-badge" style="background:${col}">${LANG==='kr'?'전시 전경':'Install'}</span>
+            <img src="${e.images[0]}" loading="lazy" alt=""></div>
+          <div class="iv-cap"><div class="iv-t">${exhFullTitle(e)}</div>
+            <div class="iv-s">${exhMetaLine(e)}</div>
+            ${t(e.photoCredit)?`<div class="iv-credit">${LANG==='kr'?'사진: ':'Photo: '}${t(e.photoCredit)}</div>`:''}</div>
+        </div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</section>`;
+  });
+
+  box.innerHTML = html;
+}
+
+/* 전시 형태 라벨 (solo→개인전, group→단체전, 그 외 그대로) */
+function exhTypeLabel(e){
+  if(e.type==='solo') return LANG==='kr'?'개인전':'Solo';
+  if(e.type==='group') return LANG==='kr'?'단체전':'Group';
+  return t(e.type)||'';
+}
+/* "기획전 《제목》 전시 전경" 형태 제목 */
+function exhFullTitle(e){
+  const ty = exhTypeLabel(e);
+  const title = t(e.title)||t(e.venue)||'';
+  const suffix = LANG==='kr'?' 전시 전경':' install. view';
+  return `${ty?ty+' ':''}《${title}》${suffix}`;
+}
+/* "장소, 기간" 메타 라인 */
+function exhMetaLine(e){
+  const venue = t(e.venue)||t(e.city)||'';
+  const period = exhPeriod(e);
+  return [venue, period].filter(Boolean).join(', ');
+}
+/* 전시 기간 표기 (2025.8.29–9.14 형태) */
+function exhPeriod(e){
+  if(e.dateStart && e.dateEnd && e.dateStart!==e.dateEnd) return `${e.dateStart}–${e.dateEnd}`;
+  if(e.dateStart) return e.dateStart;
+  return e.year ? String(e.year) : '';
+}
+
+function toggleSeries(encKey){
+  const key = decodeURIComponent(encKey);
+  if(activeSeries.has(key)) activeSeries.delete(key);
+  else activeSeries.add(key);
+  buildImageView();
+}
+function toggleAllSeries(){
+  const all = getSeriesList().map(s=>s.key);
+  if(activeSeries.size===all.length) activeSeries.clear();
+  else all.forEach(k=>activeSeries.add(k));
+  buildImageView();
+}
+
+/* 글이 연결된 대상(리서치/작업/전시)의 시리즈 색 */
+function textColor(x){
+  if(x.linkType==='research'){
+    const r = byId.research[x.linkId];
+    if(r && r.color) return r.color;
+  } else if(x.linkType==='work'){
+    const w = byId.work[x.linkId];
+    const skey = w && (w.series && (w.series.kr||w.series.en));
+    if(skey) return seriesColor(skey, [x.linkId]);
+  } else if(x.linkType==='exhibition'){
+    const wid = (worksOfExhibition[x.linkId]||[])[0];
+    const w = wid && byId.work[wid];
+    const skey = w && (w.series && (w.series.kr||w.series.en));
+    if(skey) return seriesColor(skey, [wid]);
+  }
+  return '#888';
+}
+
+/* ---- 텍스트 뷰: 글 목록 + CV(전시 연보) ---- */
+function buildTextView(){
+  const box = document.getElementById('text-view-inner');
+  const kindLabel = {note:LANG==='kr'?'작가노트':'Note',
+    critic:LANG==='kr'?'비평':'Criticism', narrative:LANG==='kr'?'내러티브':'Narrative'};
+
+  let html = `<div class="iv-head"><h2>${LANG==='kr'?'텍스트':'Texts'}</h2></div>`;
+
+  // 글 목록 (종류별) — 연결된 대상의 시리즈 색점
+  ['note','critic','narrative'].forEach(kind=>{
+    const items = TEXTS.filter(x=>x.kind===kind);
+    if(!items.length) return;
+    html += `<div class="tv-section"><h3>${kindLabel[kind]}</h3>`;
+    items.forEach(x=>{
+      const col = textColor(x);
+      html += `<div class="tv-item" onclick="openText('${x.id}')">
+        <div class="tv-t"><i class="cv-dot" style="background:${col}"></i>${t(x.title)||x.id}</div>
+        ${t(x.author)?`<div class="tv-a">${t(x.author)}</div>`:''}
+      </div>`;
+    });
+    html += `</div>`;
+  });
+
+  // CV: 전시 연보 (연도 내림차순) — 각 항목에 시리즈 색점
+  const exhs = [...EXHIBITIONS].sort((a,b)=>(b.year||0)-(a.year||0));
+  if(exhs.length){
+    html += `<div class="tv-section"><h3>CV — ${LANG==='kr'?'전시':'Exhibitions'}</h3>`;
+    exhs.forEach(e=>{
+      const typeLabel = e.type==='solo'?(LANG==='kr'?'개인전':'Solo'):(LANG==='kr'?'단체전':'Group');
+      // 이 전시에 나온 작업의 시리즈 색
+      const wid = (worksOfExhibition[e.id]||[])[0];
+      const w = wid && byId.work[wid];
+      const skey = w && (w.series && (w.series.kr||w.series.en));
+      const col = skey ? seriesColor(skey, [wid]) : '#888';
+      html += `<div class="tv-cv" onclick="openExhibition('${e.id}')">
+        <span class="tv-year"><i class="cv-dot" style="background:${col}"></i>${e.year||''}</span>
+        <span class="tv-cvt">${t(e.title)||t(e.venue)||''}</span>
+        <span class="tv-cvm">${[t(e.venue),t(e.city),typeLabel].filter(Boolean).join(', ')}</span>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+
+  // Contact
+  const c = (window.SITE && window.SITE.contact) || {};
+  if(c.email || c.instagram){
+    html += `<div class="tv-section tv-contact"><h3>Contact</h3>`;
+    if(c.email){
+      html += `<div class="ct-row">
+        <span class="ct-email" id="ct-email">${c.email}</span>
+        <button class="ct-btn" onclick="copyEmail('${c.email}')">${LANG==='kr'?'복사':'Copy'}</button>
+        <a class="ct-btn" href="mailto:${c.email}">${LANG==='kr'?'메일 보내기':'Email'}</a>
+      </div>`;
+    }
+    if(c.instagram){
+      const handle = c.instagram.replace(/^@/,'');
+      html += `<div class="ct-row">
+        <a class="ct-link" href="https://instagram.com/${handle}" target="_blank" rel="noopener">Instagram @${handle} ↗</a>
+      </div>`;
+    }
+    html += `</div>`;
+  }
+
+  box.innerHTML = html;
+}
+
+/* 이메일 복사 */
+function copyEmail(addr){
+  navigator.clipboard.writeText(addr).then(()=>{
+    const el = document.getElementById('ct-email');
+    if(el){ const old=el.textContent; el.textContent=(LANG==='kr'?'복사됨 ✓':'Copied ✓'); setTimeout(()=>el.textContent=old, 1400); }
+  });
+}
+
+/* 글 상세 패널 */
+function openText(textId){
+  const x = TEXTS.find(t=>t.id===textId);
+  if(!x) return;
+  const kindLabel = {note:LANG==='kr'?'작가노트':'Note',
+    critic:LANG==='kr'?'비평':'Criticism', narrative:LANG==='kr'?'내러티브':'Narrative'};
+  let html = `<div class="panel-hero">
+    <span class="panel-eyebrow">${kindLabel[x.kind]||''}</span>
+    <div class="panel-title">${t(x.title)||x.id}</div>
+    ${t(x.author)?`<div class="panel-sub">${t(x.author)}</div>`:''}
+  </div><div class="panel-body">`;
+  if(t(x.body)) html += `<p>${escapeHtml(t(x.body)).replace(/\n/g,'<br>')}</p>`;
+  html += `</div>`;
+  document.getElementById('panel-scroll').innerHTML = html;
+  document.getElementById('panel').classList.add('open');
+}
 
 /* =========================================================
    범례 (리서치 토글)
    ========================================================= */
 function buildLegend(){
-  const box = document.getElementById('legend');
+  const box = document.getElementById('research-legend');
   box.querySelectorAll('.legend-item').forEach(n=>n.remove());
   RESEARCHES.forEach(r=>{
     const div = document.createElement('div');
@@ -334,9 +893,12 @@ function setLang(l){
   document.getElementById('lang-kr').classList.toggle('on', l==='kr');
   document.getElementById('lang-en').classList.toggle('on', l==='en');
   document.documentElement.lang = l==='kr'?'ko':'en';
-  document.getElementById('brand').childNodes[0].textContent = t(window.SITE.title);
-  document.getElementById('legend-title').textContent = l==='kr'?'리서치':'Research';
+  document.getElementById('tg-research-label').textContent = l==='kr'?'리서치':'Research';
+  document.getElementById('tg-exhibition-label').textContent = l==='kr'?'전시':'Exhibition';
+  document.getElementById('tg-now-label').textContent = l==='kr'?'현재 & 예정':'Now & Upcoming';
   buildLegend(); drawMap(); closePanel();
+  if(currentView==='image') buildImageView();
+  if(currentView==='text') buildTextView();
 }
 
 /* 유틸 */
@@ -350,6 +912,10 @@ function escapeHtml(str){return str.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;'
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePanel(); });
 
 /* 초기화 */
+['research','exhibition','now'].forEach(k=>{
+  document.getElementById('toggle-'+k).classList.toggle('on', show[k]);
+});
+setLang(LANG);   // 라벨을 현재 언어로 초기화
 buildLegend();
 drawMap();
 // 좌표 전체가 보이도록 맞춤
